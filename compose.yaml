@@ -1,1 +1,10 @@
 services:
+  spring-jni:
+    image: 'andres727/libovaweb:latest'
+    ports:
+      - '8082:8080'
+    networks:
+      - red-backend-app
+networks:
+  red-backend-app:
+    driver: bridge
